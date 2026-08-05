@@ -23,5 +23,6 @@
     bat
     zoxide
     fzf
+    zsh
   ];
 }
