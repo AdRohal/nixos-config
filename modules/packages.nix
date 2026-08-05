@@ -28,6 +28,8 @@
     zoxide
     fzf
     zsh
+    figlet
+    toilet
 
     # Development
     vscode
