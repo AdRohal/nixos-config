@@ -30,6 +30,9 @@
     zsh
     figlet
     toilet
+   
+     # Security
+    lynis
 
     # Development
     vscode
