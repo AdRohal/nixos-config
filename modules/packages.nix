@@ -33,6 +33,7 @@
    
      # Security
     lynis
+    clamav
 
     # Development
     vscode
