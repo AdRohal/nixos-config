@@ -12,6 +12,7 @@
     gnome-browser-connector
     libgda5
     gsound
+    mission-center
 
     # Themes
     papirus-icon-theme
