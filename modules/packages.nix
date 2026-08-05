@@ -9,7 +9,7 @@
     # GNOME
     gnome-tweaks
     gnome-extension-manager
-    gnomeExtensions.pano
+    gnomeExtensions.copyous
 
     # Themes
     papirus-icon-theme
