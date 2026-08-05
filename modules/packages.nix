@@ -10,6 +10,8 @@
     gnome-tweaks
     gnome-extension-manager
     gnome-browser-connector
+    libgda5
+    gsound
 
     # Themes
     papirus-icon-theme
