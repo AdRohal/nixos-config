@@ -24,5 +24,14 @@
     zoxide
     fzf
     zsh
+
+    # Development
+    vscode
+    nodejs_24
+    pnpm
+    typescript
+    github-cli
+    postgresql
+    dotnet-sdk_10
   ];
 }
