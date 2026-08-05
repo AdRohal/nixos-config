@@ -1,39 +1,40 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    # General
-    git
-    appimage-run
+  	environment.systemPackages = with pkgs; [
+    	# General
+    	git
+    	appimage-run
 
-    # GNOME
-    gnome-tweaks
-    gnome-extension-manager
-    gnome-browser-connector
-    libgda5
-    gsound
-    mission-center
+    	# GNOME
+    	gnome-tweaks
+    	gnome-extension-manager
+    	gnome-browser-connector
+    	libgda5
+    	gsound
+    	mission-center
 
-    # Themes
-    papirus-icon-theme
-    bibata-cursors
-    orchis-theme
+    	# Themes
+    	papirus-icon-theme
+    	bibata-cursors
+    	orchis-theme
 
-    # Terminal
-    ghostty
-    fastfetch
-    starship
-    eza
-    bat
-    zoxide
-    fzf
-    zsh
-    figlet
-    toilet
+    	# Terminal
+    	ghostty
+    	fastfetch
+    	starship
+    	eza
+    	bat
+    	zoxide
+    	fzf
+    	zsh
+    	figlet
+    	toilet
    
-     # Security
-    lynis
-    clamav
+     	# Security
+    	lynis
+     	clamav
+     	aide
 
     # Development
     vscode
