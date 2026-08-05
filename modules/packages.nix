@@ -33,5 +33,26 @@
     github-cli
     postgresql
     dotnet-sdk_10
+
+    # Cybersecurity
+    nmap
+    wireshark
+    tcpdump
+    netcat
+    whois
+    traceroute
+    curl
+    wget
+    jq
+    ripgrep
+    tmux
+    burpsuite
+    ffuf
+    sqlmap
+    nikto
+    bettercap
+    aircrack-ng
+    hashcat
+    john
   ];
 }

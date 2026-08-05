@@ -13,6 +13,7 @@
       ./modules/fonts.nix
       ./modules/users.nix
       ./modules/development.nix
+      ./modules/security.nix
     ];
 
   # Bootloader.
