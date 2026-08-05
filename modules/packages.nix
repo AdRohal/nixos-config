@@ -30,6 +30,9 @@
     	zsh
     	figlet
     	toilet
+
+	# Utilities
+	usbutils
    
      	# Security
     	lynis
