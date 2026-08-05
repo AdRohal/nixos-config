@@ -54,5 +54,12 @@
     aircrack-ng
     hashcat
     john
+
+    # Communication
+    discord
+    teams-for-linux
+
+    # PostgreSQL
+    pgadmin4
   ];
 }
