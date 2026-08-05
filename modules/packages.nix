@@ -9,7 +9,7 @@
     # GNOME
     gnome-tweaks
     gnome-extension-manager
-    gnomeExtensions.copyous
+    gnome-browser-connector
 
     # Themes
     papirus-icon-theme
