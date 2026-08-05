@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./modules/packages.nix
       ./modules/desktop.nix
+      ./modules/fonts.nix
     ];
 
   # Bootloader.

@@ -10,7 +10,6 @@
 
     papirus-icon-theme
     bibata-cursors
-    jetbrains-mono
     orchis-theme
   ];
 }
