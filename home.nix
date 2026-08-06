@@ -1,46 +1,96 @@
 { config, pkgs, ... }:
 
 {
+  ############################################################
+  # Home
+  ############################################################
+
   home.username = "adrohal";
   home.homeDirectory = "/home/adrohal";
-
   home.stateVersion = "26.05";
 
+  ############################################################
+  # Home Manager
+  ############################################################
+
   programs.home-manager.enable = true;
+
+  ############################################################
+  # Starship
+  ############################################################
 
   programs.starship = {
     enable = true;
   };
-	programs.zsh = {
-  enable = true;
 
-  autosuggestion.enable = true;
-  syntaxHighlighting.enable = true;
-  enableCompletion = true;
+  ############################################################
+  # Zsh
+  ############################################################
 
-  shellAliases = {
-    ls = "eza";
-    ll = "eza -lah --icons";
-    la = "eza -la --icons";
-    lt = "eza --tree";
+  programs.zsh = {
+    enable = true;
 
-    cat = "bat";
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
 
-    gs = "git status";
-    ga = "git add .";
-    gp = "git push";
-    gl = "git log --oneline --graph --decorate";
+    shellAliases = {
+      # Navigation
+      ls = "eza";
+      ll = "eza -lah --icons";
+      la = "eza -la --icons";
+      lt = "eza --tree";
 
-    cls = "clear";
-    c = "clear";
+      # Utilities
+      cat = "bat";
+      cls = "clear";
+      c = "clear";
+
+      # Git
+      gs = "git status";
+      ga = "git add .";
+      gp = "git push";
+      gl = "git log --oneline --graph --decorate";
+    };
+
+    initContent = ''
+      eval "$(zoxide init zsh)"
+
+      if command -v fastfetch >/dev/null; then
+        fastfetch
+      fi
+    '';
   };
 
-  		initContent = ''
-    		eval "$(zoxide init zsh)"
+  ############################################################
+  # Git
+  ############################################################
 
-    		if command -v fastfetch >/dev/null; then
-      		fastfetch
-    		fi
-  		'';
-	};
+  # programs.git = {
+  #   enable = true;
+  #
+  #   userName = "Adam Rohal";
+  #   userEmail = "YOUR_EMAIL@example.com";
+  #
+  #   delta.enable = true;
+  #
+  #   extraConfig = {
+  #     init.defaultBranch = "main";
+  #     pull.rebase = false;
+  #     push.autoSetupRemote = true;
+  #     color.ui = true;
+  #   };
+  # };
+
+  ############################################################
+  # Future
+  ############################################################
+
+  # GTK
+  # Fonts
+  # VS Code
+  # SSH
+  # GPG
+  # Direnv
+  # Development
 }
