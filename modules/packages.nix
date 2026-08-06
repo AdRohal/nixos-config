@@ -30,6 +30,8 @@
     	zsh
     	figlet
     	toilet
+	zsh-autosuggestions
+	zsh-syntax-highlighting
 
 	# Utilities
 	usbutils
