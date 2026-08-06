@@ -11,23 +11,36 @@
   programs.starship = {
     enable = true;
   };
+	programs.zsh = {
+  enable = true;
 
-  programs.bash = {
-    enable = true;
+  autosuggestion.enable = true;
+  syntaxHighlighting.enable = true;
+  enableCompletion = true;
 
-    shellAliases = {
-      ls = "eza";
-      ll = "eza -lah";
-      cat = "bat";
-    };
+  shellAliases = {
+    ls = "eza";
+    ll = "eza -lah --icons";
+    la = "eza -la --icons";
+    lt = "eza --tree";
 
-    initExtra = ''
-      eval "$(zoxide init bash)"
-      eval "$(starship init bash)"
+    cat = "bat";
 
-      if command -v fastfetch >/dev/null; then
-        fastfetch
-      fi
-    '';
+    gs = "git status";
+    ga = "git add .";
+    gp = "git push";
+    gl = "git log --oneline --graph --decorate";
+
+    cls = "clear";
+    c = "clear";
   };
+
+  		initContent = ''
+    		eval "$(zoxide init zsh)"
+
+    		if command -v fastfetch >/dev/null; then
+      		fastfetch
+    		fi
+  		'';
+	};
 }
