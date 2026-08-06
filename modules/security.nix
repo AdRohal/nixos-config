@@ -29,4 +29,15 @@
     "fs.protected_symlinks" = 1;
     "fs.protected_hardlinks" = 1;
   };
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
+  nix.optimise = {
+    automatic = true;
+    dates = [ "weekly" ];
+  };
 }
