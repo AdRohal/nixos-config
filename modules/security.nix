@@ -1,13 +1,48 @@
 { config, pkgs, lib, ... }:
 
 {
+  ############################################################
+  # Linux Audit
+  ############################################################
+
   security.audit.enable = true;
   security.auditd.enable = true;
+
+  ############################################################
+  # Nix Maintenance
+  ############################################################
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
+  nix.optimise = {
+    automatic = true;
+    dates = [ "weekly" ];
+  };
+
+  ############################################################
+  # Firewall
+  ############################################################
+
+  networking.firewall = {
+    enable = true;
+    allowPing = false;
+  };
+
+  ############################################################
+  # Kernel Hardening
+  ############################################################
 
   boot.kernel.sysctl = {
     "kernel.dmesg_restrict" = 1;
     "kernel.kptr_restrict" = 2;
     "kernel.sysrq" = 0;
+
+    "kernel.unprivileged_bpf_disabled" = 1;
+    "kernel.yama.ptrace_scope" = 1;
 
     "net.ipv4.conf.all.accept_redirects" = 0;
     "net.ipv4.conf.default.accept_redirects" = 0;
@@ -30,14 +65,9 @@
     "fs.protected_hardlinks" = 1;
   };
 
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
-  };
+  ############################################################
+  # Disable Core Dumps
+  ############################################################
 
-  nix.optimise = {
-    automatic = true;
-    dates = [ "weekly" ];
-  };
+  systemd.coredump.enable = false;
 }
