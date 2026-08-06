@@ -90,5 +90,12 @@
 
     	# PostgreSQL
     	pgadmin4
+
+	 # Network Monitoring
+    	ntopng
+    	vnstat
+    	iftop
+    	bmon
+    	nethogs
   ];
 }
