@@ -49,5 +49,56 @@
       esac
     '')
 
+	(pkgs.writeShellScriptBin "sec" ''
+  case "$1" in
+    "")
+      echo ""
+      echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+      echo "         🛡 Security Center"
+      echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+      echo ""
+
+      if systemctl is-active --quiet auditd; then
+        echo " Auditd      : ✅ Running"
+      else
+        echo " Auditd      : ❌ Stopped"
+      fi
+
+      if systemctl is-active --quiet clamav-daemon; then
+        echo " ClamAV      : ✅ Running"
+      else
+        echo " ClamAV      : ⚪ Installed"
+      fi
+
+      echo ""
+      echo "Commands"
+      echo "  sec audit"
+      echo "  sec ports"
+      echo "  sec logs"
+      echo "  sec scan"
+      echo ""
+      ;;
+
+    audit)
+      sudo aureport
+      ;;
+
+    ports)
+      ss -tulpn
+      ;;
+
+    logs)
+      journalctl -p warning -b
+      ;;
+
+    scan)
+      clamscan -r ~/Downloads
+      ;;
+
+    *)
+      echo "Unknown command: $1"
+      ;;
+  esac
+'')
   ];
 }
