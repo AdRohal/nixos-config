@@ -51,7 +51,13 @@
       ga = "git add .";
       gp = "git push";
       gl = "git log --oneline --graph --decorate";
-    };
+   	
+  	traffic = "vnstat";
+  	speed = "bmon";
+  	bandwidth = "iftop";
+  	hogs = "sudo nethogs";
+ 	capture = "sudo tcpdump";
+	 };
 
     initContent = ''
       eval "$(zoxide init zsh)"

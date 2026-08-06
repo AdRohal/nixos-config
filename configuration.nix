@@ -15,6 +15,7 @@
       ./modules/development.nix
       ./modules/security.nix
 	 ./modules/networking.nix
+	./modules/scripts.nix
     ];
 
   # Bootloader.
