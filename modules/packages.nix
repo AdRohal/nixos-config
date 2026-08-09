@@ -1,101 +1,106 @@
 { pkgs, ... }:
 
 {
-  	environment.systemPackages = with pkgs; [
-    	# General
-    	git
-    	appimage-run
+	environment.systemPackages = with pkgs; [
+		# General
+		git
+		appimage-run
+		tailscale
+		scrcpy
+		android-tools
 
-    	# GNOME
-    	gnome-tweaks
-    	gnome-extension-manager
-    	gnome-browser-connector
-    	libgda5
-    	gsound
-    	mission-center
+		# GNOME
+		gnome-tweaks
+		gnome-extension-manager
+		gnome-browser-connector
+		libgda5
+		gsound
+		mission-center
 
-    	# Themes
-    	papirus-icon-theme
-    	bibata-cursors
-    	orchis-theme
+		# Themes
+		papirus-icon-theme
+		bibata-cursors
+		orchis-theme
 
-    	# Terminal
-    	ghostty
-    	fastfetch
-    	starship
-    	eza
-    	bat
-    	zoxide
-    	fzf
-    	zsh
-    	figlet
-    	toilet
-	zsh-autosuggestions
-	zsh-syntax-highlighting
+		# Terminal
+		ghostty
+		fastfetch
+		starship
+		eza
+		bat
+		zoxide
+		fzf
+		zsh
+		figlet
+		toilet
+		zsh-autosuggestions
+		zsh-syntax-highlighting
 
-	# Utilities
-	usbutils
-	pciutils
-	lsof
-	strace
-	tree
-	unzip
-	zip
-	which
-	file
-	fd
-	btop
-	direnv
-	just
-   
-     	# Security
-    	lynis
-     	clamav
-     	aide
+		# Utilities
+		usbutils
+		pciutils
+		lsof
+		strace
+		tree
+		unzip
+		zip
+		which
+		file
+		fd
+		btop
+		direnv
+		just
 
-    	# Development
-    	vscode
-    	nodejs_24
-    	pnpm
-    	typescript
-    	github-cli
-    	postgresql
-    	dotnet-sdk_10
+		# Security
+		lynis
+		clamav
+		aide
 
-    	# Cybersecurity
-    	nmap
-    	wireshark
-    	tcpdump
-    	netcat
-    	whois
-    	traceroute
-    	curl
-    	wget
-    	jq
-    	ripgrep
-    	tmux
-    	burpsuite
-    	ffuf
-    	sqlmap
-    	nikto
-    	bettercap
-    	aircrack-ng
-    	hashcat
-    	john
-	binwalk
+		# Development
+		vscode
+		nodejs_24
+		pnpm
+		typescript
+		github-cli
+		postgresql
+		dotnet-sdk_10
+		python3
+		python3Packages.pip
 
-    	# Communication
-    	discord
-    	teams-for-linux
+		# Cybersecurity
+		nmap
+		wireshark
+		tcpdump
+		netcat
+		whois
+		traceroute
+		curl
+		wget
+		jq
+		ripgrep
+		tmux
+		burpsuite
+		ffuf
+		sqlmap
+		nikto
+		bettercap
+		aircrack-ng
+		hashcat
+		john
+		binwalk
 
-    	# PostgreSQL
-    	pgadmin4
+		# Communication
+		discord
+		teams-for-linux
 
-	 # Network Monitoring
-    	ntopng
-    	vnstat
-    	iftop
-    	bmon
-    	nethogs
-  ];
+		# PostgreSQL
+		pgadmin4
+
+		# Network Monitoring
+		ntopng
+		vnstat
+		iftop
+		bmon
+		nethogs
+	];
 }
