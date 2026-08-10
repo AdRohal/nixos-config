@@ -13,6 +13,7 @@
 		gnome-tweaks
 		gnome-extension-manager
 		gnome-browser-connector
+            gnomeExtensions.quick-sound-switcher
 		libgda5
 		gsound
 		mission-center
@@ -72,6 +73,7 @@
 		wireshark
 		tcpdump
 		netcat
+        net-tools
 		whois
 		traceroute
 		curl
@@ -90,6 +92,7 @@
 		binwalk
 
 		# Communication
+        spotify
 		discord
 		teams-for-linux
 

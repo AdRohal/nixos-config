@@ -10,6 +10,7 @@
 			# Include the results of the hardware scan.
 			./hardware-configuration.nix
 			./modules/packages.nix
+./modules/custom-ip.nix
 			./modules/desktop.nix
 			./modules/fonts.nix
 			./modules/users.nix

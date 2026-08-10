@@ -1,0 +1,7 @@
+{
+  "uuid": "custom-ip@adrohal",
+  "name": "Custom IP",
+  "description": "Shows public IPv4 and local IPv4 in the GNOME top panel.",
+  "version": 1,
+  "shell-version": ["50"]
+}
