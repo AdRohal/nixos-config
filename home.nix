@@ -1,6 +1,13 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
+let
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
+in
 {
+imports = [
+  inputs.spicetify-nix.homeManagerModules.spicetify
+];
+
   ############################################################
   # Home
   ############################################################
@@ -14,6 +21,25 @@
   ############################################################
 
   programs.home-manager.enable = true;
+
+  xdg.configFile."fastfetch/config.jsonc".source = ./fastfetch/config.jsonc;
+
+############################################################
+# Spicetify / Spotify
+############################################################
+
+programs.spicetify = {
+  enable = true;
+
+  theme = spicePkgs.themes.catppuccin;
+  colorScheme = "mocha";
+
+  enabledExtensions = with spicePkgs.extensions; [
+    shuffle
+    fullAppDisplay
+  ];
+};
+
 
   ############################################################
   # Starship

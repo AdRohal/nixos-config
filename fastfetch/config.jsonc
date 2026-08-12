@@ -1,0 +1,200 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+
+  "logo": {
+    "type": "auto",
+    "source": "nixos",
+    "padding": {
+      "top": 1,
+      "right": 2
+    }
+  },
+
+  "display": {
+    "color": {
+      "keys": "cyan"
+    },
+    "separator": "",
+    "brightColor": true
+  },
+
+  "modules": [
+    "break",
+
+    {
+      "type": "custom",
+      "format": "┌──────────────────────────────────────────────────────────────────────┐"
+    },
+
+    {
+      "type": "custom",
+      "format": "│ fastfetch                                                            │"
+    },
+
+    {
+      "type": "os",
+      "key": "│ Linux       │"
+    },
+
+    {
+      "type": "kernel",
+      "key": "│ Kernel      │"
+    },
+
+    {
+      "type": "datetime",
+      "key": "│ Fetched     │",
+      "format": "{day-pretty}-{month-pretty}-{year} {hour-pretty}:{minute-pretty}:{second-pretty} {timezone-name}"
+    },
+
+    {
+      "type": "locale",
+      "key": "│ Locale      │"
+    },
+
+    {
+      "type": "custom",
+      "format": "├──────────────────────────────────────────────────────────────────────┤"
+    },
+
+    {
+      "type": "custom",
+      "format": "├──────────────────── Hardware ─────────────────────────────────────────┤"
+    },
+
+    {
+      "type": "chassis",
+      "key": "│ Chassis     │"
+    },
+
+    {
+      "type": "cpu",
+      "key": "│ CPU         │"
+    },
+
+    {
+      "type": "gpu",
+      "key": "│ GPU         │"
+    },
+
+    {
+      "type": "memory",
+      "key": "│ RAM         │",
+      "percent": {
+        "type": 3
+      }
+    },
+
+    {
+      "type": "swap",
+      "key": "│ SWAP        │",
+      "percent": {
+        "type": 3
+      }
+    },
+
+    {
+      "type": "disk",
+      "key": "│ Disk        │",
+      "folders": ["/"],
+      "percent": {
+        "type": 3
+      }
+    },
+
+    {
+      "type": "battery",
+      "key": "│ Battery     │"
+    },
+
+    {
+      "type": "custom",
+      "format": "├──────────────────────────────────────────────────────────────────────┤"
+    },
+
+    {
+      "type": "custom",
+      "format": "├──────────────────── Desktop ──────────────────────────────────────────┤"
+    },
+
+    {
+      "type": "de",
+      "key": "│ Desktop     │"
+    },
+
+    {
+      "type": "wm",
+      "key": "│ Session     │"
+    },
+
+    {
+      "type": "display",
+      "key": "│ Display     │"
+    },
+
+    {
+      "type": "gpu",
+      "key": "│ G-Driver    │",
+      "format": "{driver}"
+    },
+
+    {
+      "type": "custom",
+      "format": "├──────────────────────────────────────────────────────────────────────┤"
+    },
+
+    {
+      "type": "custom",
+      "format": "├──────────────────── Terminal ─────────────────────────────────────────┤"
+    },
+
+    {
+      "type": "shell",
+      "key": "│ Shell       │"
+    },
+
+    {
+      "type": "terminal",
+      "key": "│ Terminal    │"
+    },
+
+    {
+      "type": "terminalfont",
+      "key": "│ Term Font   │"
+    },
+
+    {
+      "type": "packages",
+      "key": "│ Packages    │"
+    },
+
+    {
+      "type": "custom",
+      "format": "├──────────────────────────────────────────────────────────────────────┤"
+    },
+
+    {
+      "type": "custom",
+      "format": "├──────────────────── Uptime ───────────────────────────────────────────┤"
+    },
+
+    {
+      "type": "uptime",
+      "key": "│ Uptime      │"
+    },
+
+    {
+      "type": "disk",
+      "key": "│ OS Age      │",
+      "folders": ["/"],
+      "format": "{create-time:10} [{days} days]"
+    },
+
+    {
+      "type": "custom",
+      "format": "└──────────────────────────────────────────────────────────────────────┘"
+    },
+
+    "break"
+  ]
+}

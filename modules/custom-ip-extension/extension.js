@@ -87,7 +87,7 @@ class IPIndicator extends PanelMenu.Button {
         this._localIP = localIP;
         this._interface = iface;
 
-        this._label.set_text(`IP ${this._localIP}`);
+        this._label.set_text("IP");
         this._updateMenu();
     }
 

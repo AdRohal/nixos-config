@@ -92,7 +92,6 @@
 		binwalk
 
 		# Communication
-        spotify
 		discord
 		teams-for-linux
 
