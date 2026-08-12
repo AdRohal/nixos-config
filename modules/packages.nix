@@ -74,6 +74,8 @@
 		tcpdump
 		netcat
         net-tools
+        iw
+        wirelesstools
 		whois
 		traceroute
 		curl
