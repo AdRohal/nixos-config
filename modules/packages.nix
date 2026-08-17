@@ -79,6 +79,8 @@
 		whois
 		traceroute
 		curl
+        openssl
+        playerctl
 		wget
 		jq
 		ripgrep
@@ -90,6 +92,7 @@
 		bettercap
 		aircrack-ng
 		hashcat
+        tor
 		john
 		binwalk
 

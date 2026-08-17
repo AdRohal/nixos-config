@@ -36,7 +36,10 @@ programs.spicetify = {
 
   enabledExtensions = with spicePkgs.extensions; [
     shuffle
-    fullAppDisplay
+  ];
+
+  enabledCustomApps = with spicePkgs.apps; [
+    marketplace
   ];
 };
 

@@ -134,4 +134,6 @@
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 	system.stateVersion = "26.05";
+  services.tor.enable = true;
+  services.tor.client.enable = true;
 }
