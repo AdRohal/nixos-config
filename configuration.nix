@@ -12,6 +12,7 @@
 			./modules/packages.nix
 ./modules/custom-ip.nix
 			./modules/desktop.nix
+			./modules/spiderman-theme.nix
 			./modules/fonts.nix
 			./modules/users.nix
 			./modules/development.nix
